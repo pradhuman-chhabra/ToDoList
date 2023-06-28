@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Todoinput from "./components/Todoinput";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <div className="center-container"></div>
+      <Todoinput />
     </div>
   );
 }
 
-export default App;
+// Thing with ES7 plugin is rfc and rfce , e estands for export so ,
+// RFC Generates this :
+
+// import React from 'react'
+
+// export default function App() {
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+// RFCE generates this :
+
+// import React from 'react'
+
+// function App() {
+//   return (
+//     <div>App</div>
+//   )
+// }
+
+// export default App
